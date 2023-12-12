@@ -21,7 +21,7 @@ fun main() {
     println("String: $string1 has all unique characters: ${IsUnique().hasUniqueCharactersBest(string1)}")
     println("String: $string2 has all unique characters: ${IsUnique().hasUniqueCharactersBest(string2)}")
     println("String: $string3 has all unique characters: ${IsUnique().hasUniqueCharactersBest(string3)}")
-    println("String: $string4 has all unique characters: ${IsUnique().hasUniqueCharactersBest(string4)}")
+    println("String: $string4 has all unique characters: ${IsUnique().hasUniqueCharactersBetter(string4)}")
 
 }
 
@@ -55,16 +55,7 @@ class IsUnique {
     /**
      * Determines whether a given string has all unique characters.
      *
-     * Time complexity: O(n), where n is the length of input string.
-     *
-     * Here's a breakdown of the time complexity:
-     *
-     * string.toSet(): This converts the string to a set, which involves iterating through each character in the string to build the set. In the worst case, this operation has a time complexity of O(n), where n is the length of the string.
-     *
-     * str.length == str.toSet().size: This checks if the length of the original string is equal to the size of the set. The size operation on a set is typically a constant-time operation.
-     *
-     * Therefore, the dominant factor in determining the time complexity is the conversion of the string to a set, resulting in a total time complexity of O(n), where n is the length of the input string. The function's runtime scales linearly with the size of the input.
-     *
+     * Time complexity: O(n), where n is the number of characters in the string.
      *
      * @param string The input string to be checked for unique characters.
      * @return `true` if all characters in the string are unique, `false` otherwise.
